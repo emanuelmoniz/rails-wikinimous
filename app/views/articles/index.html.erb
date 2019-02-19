@@ -1,0 +1,8 @@
+<div id="articles-grid">
+  <% @articles.each do |article| %>
+    <div class="article">
+        <h3 class="article-title"><%= link_to article.title, article_path(article) %></h3>
+        <p class="article-content"><%= article.content.gsub(/\[|\]|\"/, "") %></p>
+    </div>
+  <% end %>
+</div>
